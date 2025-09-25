@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligenz-Detektor</title>
+</head>
+<body>
+
+
+    <style>
+
+        * {
+            background-color: rgb(46, 41, 41);
+            color: white;
+            zoom: 160%;
+            text-align: center;
+            text-shadow: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            
+        }
+
+        
+
+        input {
+            text-align: left;
+        }
+        
+
+       
+
+        strong {
+            background-color: rgb(87, 74, 74);
+            font-size: 30px;
+            
+        }
+
+        #Hintergrund {
+           border: solid 5px rgba(165, 185, 246, 0.995);
+           border-radius: 50% 50% 50% 50%;
+            background-color: rgb(87, 74, 74);
+        }
+
+        em {
+            background-color: rgb(87, 74, 74);
+        }
+
+        
+
+    </style>
+
+
+    <div id="Hintergrund"> <br> <strong>Bist du dumm?</strong> <br> <br>
+    Ist <input type="text" id="input"> dumm oder schlau?
+    <button id="abfragen" onclick="isStupid()">Abfragen</button> <br> <br> <br> <em id="a"></em> <br> <br> <br> <br> </div>
+
+    
+    <div id="backgroundDesign"></div>
+
+
+    <script>
+
+let zufallszahl = 0;
+
+        function generiereZufallszahl() {
+            zufallszahl = Math.floor(Math.random()*5) +1;
+        }
+
+        generiereZufallszahl();
+
+let name = "";
+        function isStupid() {
+            name = document.getElementById("input").value ;
+            
+
+        
+let bereitsGesagt = false;
+let Intelligenz1 = " ";
+let Intelligenz2 = " ";
+
+        if (name === "Tim") {
+            Intelligenz1 = "Tim ist schlau";
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+            bereitsGesagt = true; 
+        }
+
+        else if (name === "Mario" || name === "Lucas") {
+            Intelligenz1= name+" ist dumm";
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+            bereitsGesagt = true;
+
+        } 
+        
+        else if (bereitsGesagt === false && zufallszahl === 1) {
+            Intelligenz1 = name+" ist sehr schlau";
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+        }
+
+        else if (bereitsGesagt === false && zufallszahl === 2) {
+            Intelligenz1 = name+" ist schlau"
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+        }
+
+         else if (bereitsGesagt === false && zufallszahl === 3) {
+            Intelligenz1 = name+" ist mittelmäßig intelligent"
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+        }
+
+         else if (bereitsGesagt === false && zufallszahl === 4) {
+            Intelligenz1= name+" ist dumm"
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+        }
+
+         else if (bereitsGesagt === false && zufallszahl === 5) {
+            Intelligenz1 = name+" ist sehr dumm"
+            Intelligenz2 = document.getElementById("a");
+            a.innerHTML = Intelligenz1;
+        }
+
+        input.value(``)
+
+    }
+
+    </script>
+</body>
+</html>
